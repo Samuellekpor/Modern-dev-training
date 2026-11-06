@@ -1,0 +1,56 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+
+# Node and TypeScript
+node_modules/
+dist/
+build/
+out/
+.next/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.ipynb_checkpoints/
+
+# AI local artifacts
+*.gguf
+*.onnx
+.ollama/
+models/
+
+# Caches, logs, and coverage
+.cache/
+*.log
+coverage/
+.turbo/
+.vercel/
+
+# Operating system and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
