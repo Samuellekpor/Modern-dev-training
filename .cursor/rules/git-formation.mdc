@@ -1,0 +1,31 @@
+---
+description: Commits Git clairs, seulement après accord, pour le portfolio de formation
+alwaysApply: true
+---
+
+# Git pendant la formation
+
+L'historique doit rester clair et utile pour un portfolio professionnel.
+
+## Quand proposer un commit
+
+À la fin d'une leçon entièrement terminée et validée :
+
+1. Mets à jour `progression.md`.
+2. Vérifie les fichiers modifiés.
+3. Propose un message de commit descriptif.
+4. Explique brièvement ce que le commit contiendra.
+
+Ne crée pas le commit sans accord explicite.
+
+Un commit correspond à une leçon validée, ou à une étape indépendante importante. Il ne correspond pas à chaque petite modification ni à chaque exercice isolé, sauf demande explicite.
+
+## Où vit le travail
+
+- Une leçon validée est conservée dans un fichier Markdown du projet.
+- L'exercice reste dans son fichier de code.
+- Ne déplace pas les fichiers existants sans accord.
+
+## Message
+
+Le message dit pourquoi ce groupe de fichiers existe. Il reste précis, sans regrouper des sujets sans lien.

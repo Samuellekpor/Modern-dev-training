@@ -17,7 +17,7 @@
 - Type-check: `tsc --noEmit` (strict, no emit)
 - Run a single exercise file: `node --experimental-strip-types <file.ts>`
 - Local dependencies: none. TypeScript is not installed in the project.
-- Git: initialized locally. No remote and no push yet.
+- Git: connected to https://github.com/Samuellekpor/Modern-dev-training on branch main.
 
 ## Current Position
 - Current week: Week 1 / 12
@@ -154,6 +154,7 @@ Week 12: Capstone, Portfolio and Job Preparation
 - A topic is `Validated` only after an unassisted or lightly assisted exercise shows the reasoning, not after the explanation alone.
 - 2026-11-06: Explanation quality is a permanent rule in `.cursor/rules/pedagogie.mdc`. Each notion starts from a known idea, states why it is needed, and is labeled as main, complementary, or reserved for later. Course 2 is restated with that progression before Exercise 2 is attempted.
 - 2026-11-06: Explanations use natural, concrete French. Technical English terms stay in English and are explained in plain words the first time they matter. Course 2 was restated again in that voice before Exercise 2, which was still unstarted.
+- 2026-11-07: Git commits follow `.cursor/rules/git-formation.mdc`. A commit is proposed only after a fully validated lesson, or for an important independent step, and it is created only with explicit agreement. Validated lessons are kept in `cours/`. Exercises stay in `src/exercises/`. Courses 1 and 2 were written into Markdown after validation and recorded in the following commit.
 
 ## Session History
 ### 2026-11-04 — Session 1

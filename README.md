@@ -62,8 +62,9 @@ node --experimental-strip-types src/exercises/01-type-inference-and-functions.ts
 ├── README.md
 ├── progression.md
 ├── tsconfig.json
+├── cours/
 ├── src/exercises/
 └── .cursor/rules/
 ```
 
-`progression.md` est le suivi de la formation. `.cursor/rules/` contient les règles de tutorat utilisées dans Cursor.
+`progression.md` est le suivi de la formation. `cours/` conserve les leçons validées. `src/exercises/` conserve les exercices. `.cursor/rules/` contient les règles de tutorat utilisées dans Cursor.

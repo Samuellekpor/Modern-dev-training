@@ -41,4 +41,5 @@ Ne valide pas un exercice tant que l'apprenant ne peut pas expliquer son raisonn
 - Ne fais pas répéter une notion déjà maîtrisée. Ajuste la difficulté au niveau réel.
 - Garde une rigueur élevée, sans ralentir artificiellement la progression.
 - Une notion lue ou copiée n'est pas maîtrisée. La validation exige de l'appliquer et de l'expliquer.
-- À la fin de chaque module, mets à jour `progression.md` : notions abordées, compétences validées, difficultés restantes, exercices réalisés, prochaine étape précise.
+- À la fin d'une leçon validée, mets à jour `progression.md` : notions abordées, compétences validées, difficultés restantes, exercices réalisés, prochaine étape précise.
+- Les commits suivent `.cursor/rules/git-formation.mdc`. Ne crée aucun commit sans accord explicite.
