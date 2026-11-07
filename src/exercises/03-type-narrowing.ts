@@ -67,6 +67,14 @@ const flights: Flight[] = [
 // "KP101" => "Accra"
 // "KP999" => "Flight not found"
 
+const getDestinationByNumber = (flightNumber: string): string => {
+  const flight = flights.find((a) => a.flightNumber === flightNumber);
+  if (flight === undefined) {
+    return "Flight not found";
+  }
+  return flight.destination;
+};
+
 // 2. describeOperationalImpact
 // - paramètre flight : Flight
 // - retour : string
@@ -74,6 +82,14 @@ const flights: Flight[] = [
 // "Delayed" => "Passengers waiting: 95" pour un vol de 95 passagers
 // "Scheduled" => "Passengers expected: 120" pour un vol de 120 passagers
 // Le nombre vient de flight.passengers.
-
+const describeOperationalImpact = (flight: Flight): string => {
+  if (flight.status === "Cancelled") {
+    return "No passengers to handle";
+  } else if (flight.status === "Delayed") {
+    return `Passengers waiting: ${flight.passengers}`;
+  } else {
+    return `Passengers expected: ${flight.passengers}`;
+  }
+};
 // Isole ce fichier des autres exercices. Les modules seront étudiés plus tard.
 export {};

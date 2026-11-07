@@ -23,14 +23,14 @@
 - Current week: Week 1 / 12
 - Current topic: TypeScript Fundamentals
 - Current lesson: Type narrowing
-- Lesson status: Introduced
+- Lesson status: Validated
 - Previous lesson: Object types, interfaces, union types — Validated
 - Previous lesson: Type inference, primitive types, function typing — Validated
 - Previous topic: JavaScript Fundamentals
 - Previous project: Flight Operations Data Manager
 - Project status: JavaScript mini-project completed before this workspace was initialized
-- Active exercise: `src/exercises/03-type-narrowing.ts` (assigned, not submitted)
-- Remaining fix: rename the `filter` callback parameter `flights` to `flight` in `src/exercises/02-object-types-and-unions.ts`
+- Active exercise: `src/exercises/03-type-narrowing.ts` (submitted and validated, not committed)
+- Exercise 2 readability fix: the `filter` callback parameter is now named `flight`
 
 ## Validated Topics
 - HTTP fundamentals
@@ -62,6 +62,7 @@
 - Interfaces
 - Union types
 - Property widening on mutable object properties
+- Type narrowing
 
 ## Topic Status
 - Destructuring: Needs review
@@ -75,9 +76,10 @@
 - Interfaces: Validated
 - Union types: Validated
 - Property widening: Validated
-- Type narrowing: Introduced
+- Type narrowing: Validated
 - Generics: Not started
-- keyof, typeof, unknown, never: Not started
+- unknown: Not started
+- keyof, typeof, never: Not started
 - Utility types: Not started
 - Promise typing: Not started
 - API typing: Not started
@@ -116,15 +118,12 @@ Known implementations from that project, treated as practiced in JavaScript and 
 - `getFlightReport`
 
 ## Next Lesson
-Exercise 3, now assigned:
-- Type narrowing
+`unknown`, because a value that arrives from outside is not yet a `Flight`. Type narrowing is how that value becomes usable. This continues lesson 3 more directly than generics.
 
-After that exercise is validated:
-- Type narrowing
+Still later in Week 1:
 - Generics
 - `keyof`
 - `typeof`
-- `unknown`
 - `never`
 - Utility types
 - Promise typing
@@ -191,7 +190,15 @@ Week 12: Capstone, Portfolio and Job Preparation
 - Remaining readability fix: the `filter` callback in `getPassengersByStatus` is still named `flights`.
 - Exercise 3 assigned in `src/exercises/03-type-narrowing.ts`. Not submitted.
 
+### 2026-11-07 — Exercise 3 validated
+- `getDestinationByNumber` removes `undefined` before reading `destination`. `describeOperationalImpact` narrows `FlightStatus` through `Cancelled`, then `Delayed`, then the remaining `Scheduled` path.
+- `tsc --noEmit` passes. The learner explained that after the `undefined` return, `flight` is `Flight` because that member of the union was eliminated.
+- Detail: the `find` callback parameter is named `a`. A name like `flight` would be clearer.
+- The `else` is correct for the three current statuses. A new status would still fall into "Passengers expected" without a type error, because the branch does not name `Scheduled`.
+- Validated: type narrowing.
+- Course note written in `cours/03-type-narrowing.md` and recorded in the following commit.
+- Commit `03163b0` was pushed to `origin/main`.
+
 ## Next Session
-- Rename the shadowed callback parameter if it is still named `flights`.
-- Review Exercise 3.
-- If the reasoning holds, validate type narrowing, then continue with the next TypeScript fundamental that the exercise makes necessary.
+- Propose the lesson 3 commit and wait for agreement.
+- Then introduce `unknown` from the narrowing already validated.
