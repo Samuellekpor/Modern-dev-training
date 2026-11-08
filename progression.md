@@ -22,14 +22,17 @@
 ## Current Position
 - Current week: Week 1 / 12
 - Current topic: TypeScript Fundamentals
-- Current lesson: Type narrowing
-- Lesson status: Validated
+- Current lesson: Promise typing
+- Lesson status: Introduced
+- Previous lesson: unknown — Validated
+- Previous lesson: Type narrowing — Validated
 - Previous lesson: Object types, interfaces, union types — Validated
 - Previous lesson: Type inference, primitive types, function typing — Validated
 - Previous topic: JavaScript Fundamentals
 - Previous project: Flight Operations Data Manager
 - Project status: JavaScript mini-project completed before this workspace was initialized
-- Active exercise: `src/exercises/03-type-narrowing.ts` (submitted and validated, not committed)
+- Active exercise: `src/exercises/05-promise-typing.ts` (assigned, not submitted)
+- Lesson 3 commit: `dec7b10`, local only, not pushed
 - Exercise 2 readability fix: the `filter` callback parameter is now named `flight`
 
 ## Validated Topics
@@ -63,6 +66,7 @@
 - Union types
 - Property widening on mutable object properties
 - Type narrowing
+- unknown
 
 ## Topic Status
 - Destructuring: Needs review
@@ -78,10 +82,10 @@
 - Property widening: Validated
 - Type narrowing: Validated
 - Generics: Not started
-- unknown: Not started
+- unknown: Validated
 - keyof, typeof, never: Not started
+- Promise typing: Introduced
 - Utility types: Not started
-- Promise typing: Not started
 - API typing: Not started
 - TypeScript modules: Not started
 
@@ -118,7 +122,7 @@ Known implementations from that project, treated as practiced in JavaScript and 
 - `getFlightReport`
 
 ## Next Lesson
-`unknown`, because a value that arrives from outside is not yet a `Flight`. Type narrowing is how that value becomes usable. This continues lesson 3 more directly than generics.
+Exercise 5, now assigned: annotate what an `async` function places inside its `Promise`.
 
 Still later in Week 1:
 - Generics
@@ -126,7 +130,6 @@ Still later in Week 1:
 - `typeof`
 - `never`
 - Utility types
-- Promise typing
 - API typing
 - Modules
 
@@ -154,6 +157,7 @@ Week 12: Capstone, Portfolio and Job Preparation
 - 2026-11-06: Explanation quality is a permanent rule in `.cursor/rules/pedagogie.mdc`. Each notion starts from a known idea, states why it is needed, and is labeled as main, complementary, or reserved for later. Course 2 is restated with that progression before Exercise 2 is attempted.
 - 2026-11-06: Explanations use natural, concrete French. Technical English terms stay in English and are explained in plain words the first time they matter. Course 2 was restated again in that voice before Exercise 2, which was still unstarted.
 - 2026-11-07: Git commits follow `.cursor/rules/git-formation.mdc`. A commit is proposed only after a fully validated lesson, or for an important independent step, and it is created only with explicit agreement. Validated lessons are kept in `cours/`. Exercises stay in `src/exercises/`. Courses 1 and 2 were written into Markdown after validation and recorded in the following commit.
+- 2026-11-07: After type narrowing, `unknown` comes before generics. It continues the same idea: do not use a value until a check has removed the unsafe possibilities. Generics wait until a function needs to be reused across several types.
 
 ## Session History
 ### 2026-11-04 — Session 1
@@ -199,6 +203,20 @@ Week 12: Capstone, Portfolio and Job Preparation
 - Course note written in `cours/03-type-narrowing.md` and recorded in the following commit.
 - Commit `03163b0` was pushed to `origin/main`.
 
+### 2026-11-08 — Exercise 4 review
+- `readFlightNumber` checks object, `null`, the property, then `string`. `tsc --noEmit` passes. No `any` and no assertion.
+- Blocking gap: `readPassengerCount` returns `NaN` because `typeof NaN` is `"number"`.
+- Misconception: the learner said `unknown` contains no type and therefore cannot be an object. `unknown` means TypeScript does not know the type yet. The runtime value can still be an object. Property access is refused until a check proves it.
+- Status remains Practiced.
+
+### 2026-11-08 — Exercise 4 validated
+- `readPassengerCount` now rejects non-numbers and `NaN`. `Number.isNaN` runs only when the value is already a number, because `||` stops at the first true check.
+- The learner corrected the explanation: `unknown` can be any runtime value, and TypeScript refuses to assume which one before a check.
+- Validated: `unknown`.
+- Course note written in `cours/04-unknown.md` and recorded in the following commit.
+- Next lesson introduced: Promise typing. Exercise 5 assigned.
+
 ## Next Session
-- Propose the lesson 3 commit and wait for agreement.
-- Then introduce `unknown` from the narrowing already validated.
+- Review Exercise 5.
+- Propose the `unknown` commit when the learner agrees. Do not commit it before that.
+- Lesson 3 commit `dec7b10` is still local. Push only with explicit agreement.
