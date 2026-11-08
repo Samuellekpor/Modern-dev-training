@@ -22,8 +22,9 @@
 ## Current Position
 - Current week: Week 1 / 12
 - Current topic: TypeScript Fundamentals
-- Current lesson: fetch, response.ok, and toFlight
+- Current lesson: Modules
 - Lesson status: Validated
+- Previous lesson: fetch, response.ok, and toFlight — Validated
 - Previous lesson: API payload typing — Validated
 - Previous lesson: Promise typing — Validated
 - Previous lesson: unknown — Validated
@@ -33,7 +34,8 @@
 - Previous topic: JavaScript Fundamentals
 - Previous project: Flight Operations Data Manager
 - Project status: JavaScript mini-project completed before this workspace was initialized
-- Active exercise: `src/exercises/07-fetch-flight.ts` (validated and recorded in the following commit)
+- Active exercise: `src/exercises/08-modules.ts` (validated and recorded in the following commit)
+- Git: local `main` is ahead of `origin/main` by `e956cad` and `31f789a`
 - Git: local `main` is one commit ahead of `origin/main`. The unpushed commit is `e956cad`.
 - Exercise 2 readability fix: the `filter` callback parameter is now named `flight`
 
@@ -72,6 +74,7 @@
 - Promise typing
 - API payload typing
 - fetch, response.ok, and JSON checked with toFlight
+- Modules: export and import
 
 ## Topic Status
 - Destructuring: Needs review
@@ -92,6 +95,7 @@
 - Promise typing: Validated
 - API payload typing: Validated
 - fetch with response.ok: Validated
+- Modules: Validated
 - Utility types: Not started
 - API typing: Not started
 - TypeScript modules: Not started
@@ -129,7 +133,7 @@ Known implementations from that project, treated as practiced in JavaScript and 
 - `getFlightReport`
 
 ## Next Lesson
-Modules: `toFlight` is copied into exercise 7. An `export` and an `import` should make one shared function.
+Generics: one function that can describe the type it receives and the type it returns, without using `any`.
 
 Still later in Week 1:
 - Generics
@@ -243,6 +247,19 @@ Week 12: Capstone, Portfolio and Job Preparation
 - DOM lib added to `tsconfig.json` so `fetch` and `Response` are known.
 - Course note written in `cours/07-fetch.md` and recorded in the following commit.
 
+### 2026-11-08 — Exercise 8 review
+- `src/flights.ts` exports `FlightStatus`, `Flight`, and `toFlight`. Exercise 8 imports them. The module explanation is correct: an `export` keeps the file's names in its own scope and makes the file a module.
+- Blocking gap: `flightsFromPayloads` uses `filter`, so it keeps the original array elements. The `Flight` built by `toFlight` is discarded. `tsc` accepts the return because `Array.isArray` narrows `unknown` to `any[]`.
+- Unused import: `FlightStatus`.
+- Status remains Practiced.
+
+### 2026-11-08 — Exercise 8 validated
+- The learner corrected `flightsFromPayloads`: `map` calls `toFlight`, then the loop keeps only the defined flights. The input array is not mutated.
+- `tsc --noEmit` passes. The unused `FlightStatus` import was removed before the commit.
+- The parameter is `unknown`, with an `Array.isArray` guard, rather than `unknown[]`. A value that is not an array returns an empty list.
+- Validated: modules, `export`, and `import`.
+- Course note written in `cours/08-modules.md` and recorded in the following commit.
+
 ## Next Session
-- Introduce modules so `toFlight` is no longer copied.
+- Introduce generics.
 - Push only with explicit agreement.
