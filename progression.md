@@ -22,8 +22,9 @@
 ## Current Position
 - Current week: Week 1 / 12
 - Current topic: TypeScript Fundamentals
-- Current lesson: API payload typing
+- Current lesson: fetch, response.ok, and toFlight
 - Lesson status: Validated
+- Previous lesson: API payload typing — Validated
 - Previous lesson: Promise typing — Validated
 - Previous lesson: unknown — Validated
 - Previous lesson: Type narrowing — Validated
@@ -32,8 +33,8 @@
 - Previous topic: JavaScript Fundamentals
 - Previous project: Flight Operations Data Manager
 - Project status: JavaScript mini-project completed before this workspace was initialized
-- Active exercise: `src/exercises/06-api-payload.ts` (validated and recorded in the following commit)
-- Git: `main` matches `origin/main` at `32bf218`
+- Active exercise: `src/exercises/07-fetch-flight.ts` (validated and recorded in the following commit)
+- Git: local `main` is one commit ahead of `origin/main`. The unpushed commit is `e956cad`.
 - Exercise 2 readability fix: the `filter` callback parameter is now named `flight`
 
 ## Validated Topics
@@ -70,6 +71,7 @@
 - unknown
 - Promise typing
 - API payload typing
+- fetch, response.ok, and JSON checked with toFlight
 
 ## Topic Status
 - Destructuring: Needs review
@@ -89,6 +91,7 @@
 - keyof, typeof, never: Not started
 - Promise typing: Validated
 - API payload typing: Validated
+- fetch with response.ok: Validated
 - Utility types: Not started
 - API typing: Not started
 - TypeScript modules: Not started
@@ -126,7 +129,7 @@ Known implementations from that project, treated as practiced in JavaScript and 
 - `getFlightReport`
 
 ## Next Lesson
-Call `fetch`, check `response.ok`, then pass `response.json()` through `toFlight`. This needs the DOM library in `tsconfig.json`.
+Modules: `toFlight` is copied into exercise 7. An `export` and an `import` should make one shared function.
 
 Still later in Week 1:
 - Generics
@@ -134,7 +137,6 @@ Still later in Week 1:
 - `typeof`
 - `never`
 - Utility types
-- Modules
 
 React does not start before TypeScript fundamentals are solid enough.
 
@@ -233,6 +235,14 @@ Week 12: Capstone, Portfolio and Job Preparation
 - Validated: API payload typing.
 - Course note written in `cours/06-donnee-api.md` and recorded in the following commit.
 
+### 2026-11-08 — Exercise 7 validated
+- `loadFlight` awaits `fetch`, returns `undefined` when `response.ok` is false, stores the JSON in `unknown`, and returns `toFlight`.
+- No `try/catch`, so a network failure still rejects the Promise.
+- `tsc --noEmit` passes. The learner explained that a 404 does not reject `fetch`; `response.ok` becomes false.
+- Validated: `fetch`, `response.ok`, and checking the JSON with `toFlight`.
+- DOM lib added to `tsconfig.json` so `fetch` and `Response` are known.
+- Course note written in `cours/07-fetch.md` and recorded in the following commit.
+
 ## Next Session
-- Write the `fetch` function that uses `toFlight`.
+- Introduce modules so `toFlight` is no longer copied.
 - Push only with explicit agreement.
