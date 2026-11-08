@@ -23,7 +23,7 @@
 - Current week: Week 1 / 12
 - Current topic: TypeScript Fundamentals
 - Current lesson: Promise typing
-- Lesson status: Introduced
+- Lesson status: Validated
 - Previous lesson: unknown — Validated
 - Previous lesson: Type narrowing — Validated
 - Previous lesson: Object types, interfaces, union types — Validated
@@ -31,8 +31,8 @@
 - Previous topic: JavaScript Fundamentals
 - Previous project: Flight Operations Data Manager
 - Project status: JavaScript mini-project completed before this workspace was initialized
-- Active exercise: `src/exercises/05-promise-typing.ts` (assigned, not submitted)
-- Lesson 3 commit: `dec7b10`, local only, not pushed
+- Active exercise: `src/exercises/05-promise-typing.ts` (validated and recorded in the following commit)
+- Local commits not pushed: `dec7b10` (type narrowing), `4be67a4` (unknown)
 - Exercise 2 readability fix: the `filter` callback parameter is now named `flight`
 
 ## Validated Topics
@@ -67,6 +67,7 @@
 - Property widening on mutable object properties
 - Type narrowing
 - unknown
+- Promise typing
 
 ## Topic Status
 - Destructuring: Needs review
@@ -84,7 +85,7 @@
 - Generics: Not started
 - unknown: Validated
 - keyof, typeof, never: Not started
-- Promise typing: Introduced
+- Promise typing: Validated
 - Utility types: Not started
 - API typing: Not started
 - TypeScript modules: Not started
@@ -122,7 +123,7 @@ Known implementations from that project, treated as practiced in JavaScript and 
 - `getFlightReport`
 
 ## Next Lesson
-Exercise 5, now assigned: annotate what an `async` function places inside its `Promise`.
+Type an API payload: the JSON from a response is not yet a `Flight`. `unknown` and `Promise` are the two tools already validated for that step.
 
 Still later in Week 1:
 - Generics
@@ -130,7 +131,6 @@ Still later in Week 1:
 - `typeof`
 - `never`
 - Utility types
-- API typing
 - Modules
 
 React does not start before TypeScript fundamentals are solid enough.
@@ -216,7 +216,13 @@ Week 12: Capstone, Portfolio and Job Preparation
 - Course note written in `cours/04-unknown.md` and recorded in the following commit.
 - Next lesson introduced: Promise typing. Exercise 5 assigned.
 
+### 2026-11-08 — Exercise 5 validated
+- `findFlight` is `async` and returns the found flight directly. Its announced type is `Promise<Flight | undefined>`.
+- `getDestination` awaits that Promise, removes `undefined`, then returns the destination or `"Flight not found"`.
+- `tsc --noEmit` passes. The learner explained that the resolved Promise contains a `Flight` or `undefined`.
+- Validated: Promise typing.
+- Course note written in `cours/05-promesses.md` and recorded in the following commit.
+
 ## Next Session
-- Review Exercise 5.
-- Propose the `unknown` commit when the learner agrees. Do not commit it before that.
-- Lesson 3 commit `dec7b10` is still local. Push only with explicit agreement.
+- Start typing an API payload.
+- Local commits through the Promise lesson are not pushed. Push only with explicit agreement.
