@@ -22,8 +22,9 @@
 ## Current Position
 - Current week: Week 1 / 12
 - Current topic: TypeScript Fundamentals
-- Current lesson: Promise typing
+- Current lesson: API payload typing
 - Lesson status: Validated
+- Previous lesson: Promise typing — Validated
 - Previous lesson: unknown — Validated
 - Previous lesson: Type narrowing — Validated
 - Previous lesson: Object types, interfaces, union types — Validated
@@ -31,8 +32,8 @@
 - Previous topic: JavaScript Fundamentals
 - Previous project: Flight Operations Data Manager
 - Project status: JavaScript mini-project completed before this workspace was initialized
-- Active exercise: `src/exercises/05-promise-typing.ts` (validated and recorded in the following commit)
-- Local commits not pushed: `dec7b10` (type narrowing), `4be67a4` (unknown)
+- Active exercise: `src/exercises/06-api-payload.ts` (validated and recorded in the following commit)
+- Git: `main` matches `origin/main` at `32bf218`
 - Exercise 2 readability fix: the `filter` callback parameter is now named `flight`
 
 ## Validated Topics
@@ -68,6 +69,7 @@
 - Type narrowing
 - unknown
 - Promise typing
+- API payload typing
 
 ## Topic Status
 - Destructuring: Needs review
@@ -86,6 +88,7 @@
 - unknown: Validated
 - keyof, typeof, never: Not started
 - Promise typing: Validated
+- API payload typing: Validated
 - Utility types: Not started
 - API typing: Not started
 - TypeScript modules: Not started
@@ -123,7 +126,7 @@ Known implementations from that project, treated as practiced in JavaScript and 
 - `getFlightReport`
 
 ## Next Lesson
-Type an API payload: the JSON from a response is not yet a `Flight`. `unknown` and `Promise` are the two tools already validated for that step.
+Call `fetch`, check `response.ok`, then pass `response.json()` through `toFlight`. This needs the DOM library in `tsconfig.json`.
 
 Still later in Week 1:
 - Generics
@@ -223,6 +226,13 @@ Week 12: Capstone, Portfolio and Job Preparation
 - Validated: Promise typing.
 - Course note written in `cours/05-promesses.md` and recorded in the following commit.
 
+### 2026-11-08 — Exercise 6 validated
+- `toFlight` rejects `null`, missing fields, a wrong status, a string passenger count, and `NaN`. It returns a new object made only of the four checked fields.
+- `tsc --noEmit` passes. No `any` and no assertion.
+- The learner explained that `any` allows unchecked use, while `unknown` requires the checks before the value can be used.
+- Validated: API payload typing.
+- Course note written in `cours/06-donnee-api.md` and recorded in the following commit.
+
 ## Next Session
-- Start typing an API payload.
-- Local commits through the Promise lesson are not pushed. Push only with explicit agreement.
+- Write the `fetch` function that uses `toFlight`.
+- Push only with explicit agreement.
