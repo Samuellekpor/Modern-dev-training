@@ -22,8 +22,10 @@
 ## Current Position
 - Current week: Week 1 / 12
 - Current topic: TypeScript Fundamentals
-- Current lesson: Modules
-- Lesson status: Validated
+- Current lesson: keyof, typeof, never, and utility types
+- Lesson status: Introduced
+- Previous lesson: Generics — Validated
+- Previous lesson: Modules — Validated
 - Previous lesson: fetch, response.ok, and toFlight — Validated
 - Previous lesson: API payload typing — Validated
 - Previous lesson: Promise typing — Validated
@@ -34,9 +36,9 @@
 - Previous topic: JavaScript Fundamentals
 - Previous project: Flight Operations Data Manager
 - Project status: JavaScript mini-project completed before this workspace was initialized
-- Active exercise: `src/exercises/08-modules.ts` (validated and recorded in the following commit)
-- Git: local `main` is ahead of `origin/main` by `e956cad` and `31f789a`
-- Git: local `main` is one commit ahead of `origin/main`. The unpushed commit is `e956cad`.
+- Active exercise: `src/exercises/10-types-utiles.ts` (assigned, not submitted)
+- Generics exercise `src/exercises/09-generics.ts` is validated and recorded in the following commit
+- Git: local `main` is ahead of `origin/main` by `e956cad`, `31f789a`, and `bd94089`
 - Exercise 2 readability fix: the `filter` callback parameter is now named `flight`
 
 ## Validated Topics
@@ -75,6 +77,7 @@
 - API payload typing
 - fetch, response.ok, and JSON checked with toFlight
 - Modules: export and import
+- Generics
 
 ## Topic Status
 - Destructuring: Needs review
@@ -89,15 +92,13 @@
 - Union types: Validated
 - Property widening: Validated
 - Type narrowing: Validated
-- Generics: Not started
 - unknown: Validated
-- keyof, typeof, never: Not started
 - Promise typing: Validated
 - API payload typing: Validated
 - fetch with response.ok: Validated
 - Modules: Validated
-- Utility types: Not started
-- API typing: Not started
+- Generics: Validated
+- keyof, typeof, never, utility types: Introduced
 - TypeScript modules: Not started
 
 ## Topics To Strengthen
@@ -133,14 +134,9 @@ Known implementations from that project, treated as practiced in JavaScript and 
 - `getFlightReport`
 
 ## Next Lesson
-Generics: one function that can describe the type it receives and the type it returns, without using `any`.
+Exercise 10, now assigned. It closes Week 1: `keyof`, `Pick`, and `Partial`.
 
-Still later in Week 1:
-- Generics
-- `keyof`
-- `typeof`
-- `never`
-- Utility types
+Week 2 starts after this exercise is validated: React and TypeScript.
 
 React does not start before TypeScript fundamentals are solid enough.
 
@@ -260,6 +256,13 @@ Week 12: Capstone, Portfolio and Job Preparation
 - Validated: modules, `export`, and `import`.
 - Course note written in `cours/08-modules.md` and recorded in the following commit.
 
+### 2026-11-08 — Exercise 9 validated
+- `definedItems<T>` copies only the defined elements into a new array. The input is not mutated.
+- `tsc --noEmit` passes. The learner explained that a `Flight | undefined` array makes `T` become `Flight`.
+- Validated: generics.
+- Course note written in `cours/09-generics.md` and recorded in the following commit.
+- Closing lesson introduced in the same session. Exercise 10 assigned.
+
 ## Next Session
-- Introduce generics.
+- Review Exercise 10, then close Week 1.
 - Push only with explicit agreement.
