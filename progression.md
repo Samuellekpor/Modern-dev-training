@@ -162,6 +162,7 @@ Week 12: Capstone, Portfolio and Job Preparation
 - 2026-11-06: Explanations use natural, concrete French. Technical English terms stay in English and are explained in plain words the first time they matter. Course 2 was restated again in that voice before Exercise 2, which was still unstarted.
 - 2026-11-07: Git commits follow `.cursor/rules/git-formation.mdc`. A commit is proposed only after a fully validated lesson, or for an important independent step, and it is created only with explicit agreement. Validated lessons are kept in `cours/`. Exercises stay in `src/exercises/`. Courses 1 and 2 were written into Markdown after validation and recorded in the following commit.
 - 2026-11-07: After type narrowing, `unknown` comes before generics. It continues the same idea: do not use a value until a check has removed the unsafe possibilities. Generics wait until a function needs to be reused across several types.
+- 2026-11-09: The permanent methodology is in `.cursor/rules/methodologie.mdc`. JavaScript and TypeScript fundamentals stay validated. React is targeted consolidation, not a from-scratch course. Python and Git get a short review before application. FastAPI, SQL, AI engineering, testing, architecture, security, and infrastructure are taught in depth. The rule is recorded in the following commit.
 
 ## Session History
 ### 2026-11-04 — Session 1
@@ -271,5 +272,5 @@ Week 12: Capstone, Portfolio and Job Preparation
 - Week 1 is complete.
 
 ## Next Session
-- Start Week 2 with a React component, props, and state.
+- Start Week 2 as React consolidation: state, rendering, state updates, `useEffect` dependencies, fetching, and TypeScript. Do not restart JSX, components, or props from zero.
 - Push only with explicit agreement.

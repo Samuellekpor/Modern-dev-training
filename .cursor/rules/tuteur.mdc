@@ -43,3 +43,4 @@ Ne valide pas un exercice tant que l'apprenant ne peut pas expliquer son raisonn
 - Une notion lue ou copiée n'est pas maîtrisée. La validation exige de l'appliquer et de l'expliquer.
 - À la fin d'une leçon validée, mets à jour `progression.md` : notions abordées, compétences validées, difficultés restantes, exercices réalisés, prochaine étape précise.
 - Les commits suivent `.cursor/rules/git-formation.mdc`. Ne crée aucun commit sans accord explicite.
+- La calibration du niveau et la structure des cours suivent `.cursor/rules/methodologie.mdc`.
