@@ -20,10 +20,10 @@
 - Git: connected to https://github.com/Samuellekpor/Modern-dev-training on branch main.
 
 ## Current Position
-- Current week: Week 1 / 12
+- Current week: Week 1 / 12 completed
 - Current topic: TypeScript Fundamentals
 - Current lesson: keyof, typeof, never, and utility types
-- Lesson status: Introduced
+- Lesson status: Validated
 - Previous lesson: Generics — Validated
 - Previous lesson: Modules — Validated
 - Previous lesson: fetch, response.ok, and toFlight — Validated
@@ -36,7 +36,7 @@
 - Previous topic: JavaScript Fundamentals
 - Previous project: Flight Operations Data Manager
 - Project status: JavaScript mini-project completed before this workspace was initialized
-- Active exercise: `src/exercises/10-types-utiles.ts` (assigned, not submitted)
+- Active exercise: `src/exercises/10-types-utiles.ts` (validated and recorded in the following commit)
 - Generics exercise `src/exercises/09-generics.ts` is validated and recorded in the following commit
 - Git: local `main` is ahead of `origin/main` by `e956cad`, `31f789a`, and `bd94089`
 - Exercise 2 readability fix: the `filter` callback parameter is now named `flight`
@@ -78,6 +78,7 @@
 - fetch, response.ok, and JSON checked with toFlight
 - Modules: export and import
 - Generics
+- keyof, Pick, and Partial
 
 ## Topic Status
 - Destructuring: Needs review
@@ -98,7 +99,7 @@
 - fetch with response.ok: Validated
 - Modules: Validated
 - Generics: Validated
-- keyof, typeof, never, utility types: Introduced
+- keyof, typeof, never, utility types: Validated
 - TypeScript modules: Not started
 
 ## Topics To Strengthen
@@ -134,11 +135,9 @@ Known implementations from that project, treated as practiced in JavaScript and 
 - `getFlightReport`
 
 ## Next Lesson
-Exercise 10, now assigned. It closes Week 1: `keyof`, `Pick`, and `Partial`.
+Week 2 — React and TypeScript. Start with a component, its props, and its state.
 
-Week 2 starts after this exercise is validated: React and TypeScript.
-
-React does not start before TypeScript fundamentals are solid enough.
+Week 1 is complete.
 
 ## Roadmap
 Week 1: Web Fundamentals, JavaScript, TypeScript
@@ -263,6 +262,14 @@ Week 12: Capstone, Portfolio and Job Preparation
 - Course note written in `cours/09-generics.md` and recorded in the following commit.
 - Closing lesson introduced in the same session. Exercise 10 assigned.
 
+### 2026-11-09 — Exercise 10 validated, Week 1 closed
+- `readField<T, K extends keyof T>` returns `item[key]`, typed as `T[K]`.
+- `FlightSummary` is `Pick<Flight, "flightNumber" | "destination">`. `FlightUpdate` is `Partial<Flight>`.
+- `tsc --noEmit` passes. The learner explained that `readField(flight, "passengers")` is `number` because that is the type of the property.
+- Validated: `keyof`, indexed access, `Pick`, and `Partial`. `typeof` as a type operator and `never` were recognized, not practiced separately.
+- Course note written in `cours/10-types-utiles.md` and recorded in the following commit.
+- Week 1 is complete.
+
 ## Next Session
-- Review Exercise 10, then close Week 1.
+- Start Week 2 with a React component, props, and state.
 - Push only with explicit agreement.
