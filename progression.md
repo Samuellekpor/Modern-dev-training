@@ -20,9 +20,9 @@
 - Git: connected to https://github.com/Samuellekpor/Modern-dev-training on branch main.
 
 ## Current Position
-- Current week: Week 1 / 12 completed
-- Current topic: TypeScript Fundamentals
-- Current lesson: keyof, typeof, never, and utility types
+- Current week: Week 2 / 12
+- Current topic: React and TypeScript
+- Current lesson: state, rendering, and state updates
 - Lesson status: Validated
 - Previous lesson: Generics — Validated
 - Previous lesson: Modules — Validated
@@ -36,7 +36,8 @@
 - Previous topic: JavaScript Fundamentals
 - Previous project: Flight Operations Data Manager
 - Project status: JavaScript mini-project completed before this workspace was initialized
-- Active exercise: `src/exercises/10-types-utiles.ts` (validated and recorded in the following commit)
+- Active exercise: `week-02/flight-board/src/FlightBoard.tsx` (validated and recorded in the following commit)
+- Week 1 exercise `src/exercises/10-types-utiles.ts` remains validated
 - Generics exercise `src/exercises/09-generics.ts` is validated and recorded in the following commit
 - Git: local `main` is ahead of `origin/main` by `e956cad`, `31f789a`, and `bd94089`
 - Exercise 2 readability fix: the `filter` callback parameter is now named `flight`
@@ -135,7 +136,7 @@ Known implementations from that project, treated as practiced in JavaScript and 
 - `getFlightReport`
 
 ## Next Lesson
-Week 2 — React and TypeScript. Start with a component, its props, and its state.
+Week 2, lesson 2 — `useEffect`, its dependency array, and a fetch with error handling.
 
 Week 1 is complete.
 
@@ -271,6 +272,19 @@ Week 12: Capstone, Portfolio and Job Preparation
 - Course note written in `cours/10-types-utiles.md` and recorded in the following commit.
 - Week 1 is complete.
 
+### 2026-11-09 — Week 2 started
+- React is consolidation. JSX, components, props, `useState`, and `useEffect` are not restarted from zero.
+- Introduced state, rendering, and immutable state updates. Not validated.
+- Exercise assigned in `week-02/flight-board/src/FlightBoard.tsx`.
+- A Vite + React + TypeScript app was added because the week needs a runnable interface. Dependencies stay in `week-02/flight-board`.
+
+### 2026-11-09 — Exercise: state and rendering validated
+- `useState<Flight[]>` holds the flights. The button calls `setFlights` with a new array. The matching flight is a new object, status `"Delayed"`.
+- Clicking KP101, then KP103, updates only the chosen row. The other statuses stay unchanged.
+- The learner explained that the setter schedules a new render, and that mutating then passing the same reference does not.
+- Validated: render, state update, and immutable list update.
+- Course note written in `cours/11-state-et-rendu.md` and recorded in the following commit.
+
 ## Next Session
-- Start Week 2 as React consolidation: state, rendering, state updates, `useEffect` dependencies, fetching, and TypeScript. Do not restart JSX, components, or props from zero.
+- Consolidate `useEffect`, its dependency array, fetching, and error handling.
 - Push only with explicit agreement.
